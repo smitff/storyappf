@@ -98,11 +98,10 @@ const Home = ({navigation}) => {
         }
     }
 
-    useEffect(()=>{
+    // useEffect(()=>{
         
-        getAdsItem()
 
-    },[])
+    // },[])
 
 
 
@@ -112,6 +111,7 @@ const Home = ({navigation}) => {
  useEffect(() => {
     // getAllStory()   
     const willFocusSubscription = navigation.addListener('focus', () => {
+    getAdsItem()
       getAllCategory()
     });
 

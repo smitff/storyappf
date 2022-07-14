@@ -102,11 +102,10 @@ const Storylist = ({navigation,route}) => {
     const _keyExtractor = (item, index) => item._id;
 
 
-    useEffect(()=>{
+    // useEffect(()=>{
         
-        getAdsItem()
 
-    },[])
+    // },[])
 
 
     // useEffect(()=>{
@@ -123,6 +122,8 @@ const Storylist = ({navigation,route}) => {
     // getAllStory()   
     const willFocusSubscription = navigation.addListener('focus', () => {
       getAllStory()
+      getAdsItem()
+
     });
 
     return willFocusSubscription;
